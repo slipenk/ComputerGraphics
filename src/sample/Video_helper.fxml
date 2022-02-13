@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: rgb(255,252,248); -fx-background-radius: 30px; -fx-border-radius: 30px;" stylesheets="@/resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.VideoHelper">
+    <children>
+        <AnchorPane fx:id="Fractal" layoutX="149.0" layoutY="110.0" maxHeight="337.0" maxWidth="562.0" minHeight="289.0" minWidth="288.0" prefHeight="298.0" prefWidth="417.0" style="-fx-background-color: FFFFF4;  -fx-border-width: 3px; -fx-border-color: black;" />
+        <ImageView fitHeight="516.0" fitWidth="724.0" layoutX="-2.0" layoutY="-3.0" opacity="0.2">
+            <image>
+                <Image url="@/resources/CG.jpg" />
+            </image>
+        </ImageView>
+        
+
+        <Button layoutX="175.0" layoutY="430.0" mnemonicParsing="false" onAction="#Play_video" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text="play">
+            <font>
+                <Font name="SF Distant Galaxy" size="20.0" />
+            </font>
+         <tooltip>
+            <Tooltip text="Click to play the video" />
+         </tooltip>
+        </Button>
+        <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="36.0" prefWidth="721.0" style="-fx-background-color: rgb(255,230,143); -fx-background-radius: 0px 0px 15px 15px;">
+            <children>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="686.0" layoutY="4.0" onMousePressed="#Go_to_color_scheme" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/rgb.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="650.0" layoutY="4.0" onMousePressed="#Go_to_triangle" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/CS.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="4.0" onMousePressed="#Go_to_study_materials" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/study.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="4.0" onMousePressed="#Go_to_start_page" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/co.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="615.0" layoutY="4.0" onMousePressed="#Go_to_fractals" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/resources/Fractal_start.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="273.0" layoutY="61.0" text="video helper" textAlignment="CENTER">
+            <font>
+                <Font name="SF Distant Galaxy" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="395.0" layoutY="430.0" mnemonicParsing="false" onAction="#Stop_video" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text=" pause&#10;&#10;">
+            <font>
+                <Font name="SF Distant Galaxy" size="20.0" />
+            </font>
+         <tooltip>
+            <Tooltip text="Click to stop the video" />
+         </tooltip>
+        </Button>
+      <MediaView fx:id="mediaView" fitHeight="289.0" fitWidth="400.0" layoutX="153.0" layoutY="113.0" />
+
+    </children>
+</AnchorPane>

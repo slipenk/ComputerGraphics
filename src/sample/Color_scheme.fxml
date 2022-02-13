@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: rgb(255,252,248); -fx-background-radius: 30px; -fx-border-radius: 30px;" stylesheets="@/resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ColorScheme">
+    <children>
+        <ImageView fitHeight="516.0" fitWidth="724.0" layoutX="-2.0" layoutY="-3.0" opacity="0.2">
+            <image>
+                <Image url="@/resources/CG.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="Original_image" layoutX="107.0" layoutY="107.0" maxHeight="153.0" maxWidth="240.0" minHeight="153.0" minWidth="240.0" prefHeight="153.0" prefWidth="240.0" style="-fx-background-color: FFFFF4; -fx-border-width: 1px; -fx-border-color: black;">
+         <children>
+            <ImageView fx:id="Image_view_original" fitHeight="155.0" fitWidth="242.0" layoutX="-2.0" layoutY="-1.0" onMouseMoved="#On_Mouse_Moved" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+        <Button fx:id="ResetB" layoutX="495.0" layoutY="291.0" mnemonicParsing="false" onAction="#Reset_Satur" prefHeight="39.0" prefWidth="102.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text="RESET">
+            <font>
+                <Font name="SF Distant Galaxy" size="15.0" />
+            </font>
+         <tooltip>
+            <Tooltip text="Reset to default" />
+         </tooltip>
+        </Button>
+        <RadioButton fx:id="RGB" layoutX="517.0" layoutY="156.0" mnemonicParsing="false" onAction="#RadioButtonChanged" text="RGB">
+            <font>
+                <Font name="SF Distant Galaxy" size="15.0" />
+            </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Schemes" />
+         </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="HSV" layoutX="517.0" layoutY="195.0" mnemonicParsing="false" onAction="#RadioButtonChanged" text="HSV" toggleGroup="$Schemes">
+            <font>
+                <Font name="SF Distant Galaxy" size="15.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="R" alignment="CENTER" layoutX="454.0" layoutY="417.0" minHeight="10.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+            <font>
+                <Font name="SF Distant Galaxy" size="12.0" />
+            </font>
+        </TextField>
+        <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="36.0" prefWidth="721.0" style="-fx-background-color: rgb(255,230,143); -fx-background-radius: 0px 0px 15px 15px;">
+            <children>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="687.0" layoutY="4.0" onMousePressed="#Go_to_info" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/info.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="651.0" layoutY="4.0" onMousePressed="#Go_to_fractals" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/Fractal_start.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="615.0" layoutY="4.0" onMousePressed="#Go_to_triangle" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/CS.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="4.0" onMousePressed="#Go_to_study_materials" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/study.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="4.0" onMousePressed="#Go_to_start_page" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/co.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="179.0" layoutY="57.0" text="PLAY with color scheme!" textAlignment="CENTER">
+            <font>
+                <Font name="SF Distant Galaxy" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="226.0" layoutY="452.0" mnemonicParsing="false" onAction="#Download" prefHeight="49.0" prefWidth="121.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text="DOWNLOAD" textAlignment="CENTER">
+            <font>
+                <Font name="SF Distant Galaxy" size="15.0" />
+            </font>
+         <tooltip>
+            <Tooltip text="Download image" />
+         </tooltip>
+        </Button>
+      <Button layoutX="99.0" layoutY="452.0" mnemonicParsing="false" onAction="#Upload" prefHeight="49.0" prefWidth="121.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text="UPLOAD" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Upload image">
+               <font>
+                  <Font name="SF Distant Galaxy" size="13.0" />
+               </font></Tooltip>
+         </tooltip>
+      </Button>
+      <AnchorPane fx:id="Image_after_changes" layoutX="105.0" layoutY="285.0" maxHeight="153.0" maxWidth="240.0" minHeight="153.0" minWidth="240.0" prefHeight="153.0" prefWidth="240.0" style="-fx-background-color: FFFFF4; -fx-border-width: 1px; -fx-border-color: black;">
+         <children>
+            <ImageView fx:id="Image_view_after" fitHeight="153.0" fitWidth="240.0" nodeOrientation="INHERIT" onMouseMoved="#On_Mouse_Moved_after" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+      <Label layoutX="165.0" layoutY="89.0" text="Original image" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="265.0" text="image after changes" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Slider fx:id="Slider_color" layoutX="468.0" layoutY="238.0" max="1.0" onMouseClicked="#On_Mouse_Clicked" onMousePressed="#On_Mouse_Pressed" prefHeight="16.0" prefWidth="175.0" style="-fx-color: FFFFF4; -fx-border-width: 2px;" value="1.0">
+         <tooltip>
+            <Tooltip text="Move to change the saturation" />
+         </tooltip></Slider>
+      <Label layoutX="446.0" layoutY="118.0" text="Green saturation" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="468.0" layoutY="263.0" text="MIN" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="617.0" layoutY="262.0" text="MAX" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="381.0" text="Result" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="It is a color meter!" />
+         </tooltip>
+      </Label>
+      <TextField fx:id="G" alignment="CENTER" layoutX="528.0" layoutY="417.0" minHeight="10.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+         <font>
+            <Font name="SF Distant Galaxy" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="B" alignment="CENTER" layoutX="602.0" layoutY="417.0" minHeight="10.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+         <font>
+            <Font name="SF Distant Galaxy" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="438.0" layoutY="419.0" text="R" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="419.0" text="G" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="589.0" layoutY="419.0" text="B" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="H" alignment="CENTER" layoutX="453.0" layoutY="458.0" minHeight="10.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+         <font>
+            <Font name="SF Distant Galaxy" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="S" alignment="CENTER" layoutX="527.0" layoutY="458.0" minHeight="10.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+         <font>
+            <Font name="SF Distant Galaxy" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="V" alignment="CENTER" layoutX="601.0" layoutY="458.0" minHeight="10.0" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+         <font>
+            <Font name="SF Distant Galaxy" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="437.0" layoutY="460.0" text="H" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="513.0" layoutY="460.0" text="S" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="588.0" layoutY="460.0" text="v" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

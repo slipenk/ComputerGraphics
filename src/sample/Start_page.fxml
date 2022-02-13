@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: rgb(255,252,248); -fx-background-radius: 30px; -fx-border-radius: 30px;" stylesheets="@/resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartPage">
+    <children>
+        <ImageView fitHeight="516.0" fitWidth="724.0" layoutX="-2.0" layoutY="-3.0" opacity="0.2">
+            <image>
+                <Image url="@/resources/CG.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="36.0" prefWidth="721.0" style="-fx-background-color: rgb(255,230,143); -fx-background-radius: 0px 0px 15px 15px;">
+            <children>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="687.0" layoutY="4.0" onMousePressed="#Go_to_info" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/info.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="648.0" layoutY="4.0" onMousePressed="#Go_to_study" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/resources/study.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="221.0" layoutY="278.0" text="May the Computer " textAlignment="CENTER">
+            <font>
+                <Font name="SF Distant Galaxy" size="25.0" />
+            </font>
+        </Label>
+        <Label fx:id="label" layoutX="438.0" layoutY="427.0" prefHeight="68.0" prefWidth="262.0">
+            <font>
+                <Font name="SF Distant Galaxy" size="13.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="260.0" layoutY="65.0">
+         <image>
+            <Image url="@/resources/co.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="227.0" layoutY="306.0" text="graphics be with " textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="333.0" text="you" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="87.0" fitWidth="87.0" layoutX="222.0" layoutY="386.0" onMousePressed="#Go_to_fractals" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/resources/Fractal_start.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="87.0" fitWidth="87.0" layoutX="322.0" layoutY="386.0" onMousePressed="#Go_to_color_scheme" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/resources/rgb.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="87.0" fitWidth="87.0" layoutX="422.0" layoutY="385.0" onMousePressed="#Go_to_triangle" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/resources/CS.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="229.0" layoutY="377.0" prefHeight="17.0" prefWidth="75.0">
+         <tooltip>
+            <Tooltip text="Go to fractals" />
+         </tooltip>
+      </Label>
+      <Label layoutX="327.0" layoutY="377.0" prefHeight="17.0" prefWidth="75.0">
+         <tooltip>
+            <Tooltip text="Go to color schemes" />
+         </tooltip>
+      </Label>
+      <Label layoutX="428.0" layoutY="377.0" prefHeight="17.0" prefWidth="75.0">
+         <tooltip>
+            <Tooltip text="Go to affine" />
+         </tooltip>
+      </Label>
+    </children>
+</AnchorPane>

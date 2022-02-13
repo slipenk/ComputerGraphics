@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: rgb(255,252,248); -fx-background-radius: 30px; -fx-border-radius: 30px;" stylesheets="@/resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Fractals">
+   <children>
+      <ImageView fitHeight="516.0" fitWidth="724.0" layoutX="-2.0" layoutY="-3.0" opacity="0.2">
+         <image>
+            <Image url="@/resources/CG.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="Fractal" layoutX="63.0" layoutY="104.0" maxHeight="337.0" maxWidth="337.0" minHeight="337.0" minWidth="337.0" prefHeight="337.0" prefWidth="337.0" style="-fx-background-color: FFFFF4; -fx-background-radius: 30px; -fx-border-width: 1px; -fx-border-color: black;" />
+      <Button layoutX="501.0" layoutY="413.0" mnemonicParsing="false" onAction="#Create_Fractal" prefHeight="53.0" prefWidth="136.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text="Create">
+         <font>
+            <Font name="SF Distant Galaxy" size="20.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Generate fractal" />
+         </tooltip>
+      </Button>
+      <RadioButton fx:id="T_fractal" layoutX="481.0" layoutY="161.0" mnemonicParsing="false" selected="true" text="T-square Fractal">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="H_fractal" layoutX="481.0" layoutY="200.0" mnemonicParsing="false" text="H tree Fractal" toggleGroup="$gender">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="481.0" layoutY="265.0" text="Enter number ">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="284.0" text="of iterations:">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Number" alignment="CENTER" layoutX="619.0" layoutY="273.0" minHeight="10.0" prefHeight="22.0" prefWidth="45.0" style="-fx-background-color: FFFFF4; -fx-border-color: black; -fx-border-width: 2px;">
+         <font>
+            <Font name="SF Distant Galaxy" size="13.0" />
+         </font>
+      </TextField>
+      <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="36.0" prefWidth="721.0" style="-fx-background-color: rgb(255,230,143); -fx-background-radius: 0px 0px 15px 15px;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="687.0" layoutY="4.0" onMousePressed="#Go_to_info" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/resources/info.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="651.0" layoutY="4.0" onMousePressed="#Go_to_color_scheme" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/resources/rgb.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="615.0" layoutY="4.0" onMousePressed="#Go_to_triangle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/resources/CS.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="580.0" layoutY="4.0" onMousePressed="#Go_to_study_materials" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/resources/study.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="4.0" onMousePressed="#Go_to_start_page" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/resources/co.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="252.0" layoutY="56.0" text="Create fractals!" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="169.0" layoutY="450.0" mnemonicParsing="false" onAction="#Download" prefHeight="44.0" prefWidth="135.0" style="-fx-background-color: FFE68F; -fx-background-radius: 30px;" text="DOWNLOAD" textAlignment="CENTER">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Download image" />
+         </tooltip>
+      </Button>
+      <RadioButton fx:id="Red" layoutX="458.0" layoutY="369.0" mnemonicParsing="false" prefWidth="81.0" text="Red">
+         <toggleGroup>
+            <ToggleGroup fx:id="salah" />
+         </toggleGroup>
+         <font>
+            <Font name="SF Distant Galaxy" size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="Yellow" layoutX="522.0" layoutY="363.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="104.0" selected="true" text="Original&#10;yellow" toggleGroup="$salah">
+         <font>
+            <Font name="SF Distant Galaxy" size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="Black" layoutX="621.0" layoutY="368.0" mnemonicParsing="false" prefWidth="81.0" text="Black" toggleGroup="$salah">
+         <font>
+            <Font name="SF Distant Galaxy" size="13.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="490.0" layoutY="340.0" prefHeight="16.0" prefWidth="181.0" text="Color of fractals">
+         <font>
+            <Font name="SF Distant Galaxy" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
